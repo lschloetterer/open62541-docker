@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    opcua:
+        image: ghcr.io/lschloetterer/open62541-docker:latest
+        restart: unless-stopped
+        ports:
+            - 4840:4840
+        environment:
+            - TZ=Europe/Berlin
